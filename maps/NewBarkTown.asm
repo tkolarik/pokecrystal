@@ -126,6 +126,7 @@ NewBarkTownSilverScript:
 	end
 
 NewBarkTownSign:
+	special HealParty
 	jumptext NewBarkTownSignText
 
 NewBarkTownPlayersHouseSign:
@@ -265,6 +266,8 @@ NewBarkTownSignText:
 	para "The Town Where the"
 	line "Winds of a New"
 	cont "Beginning Blow"
+
+	para "Now, Fuck-Off!"
 	done
 
 NewBarkTownPlayersHouseSignText:

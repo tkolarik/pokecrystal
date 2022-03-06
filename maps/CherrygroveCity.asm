@@ -475,7 +475,7 @@ SilverCherrygroveLossText:
 CherrygroveRivalText_YouWon:
 	text "<……> <……> <……>"
 
-	para "My name's ???."
+	para "My name's SILVER."
 
 	para "I'm going to be"
 	line "the world's great-"

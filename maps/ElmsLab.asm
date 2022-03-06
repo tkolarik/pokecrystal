@@ -514,11 +514,11 @@ AideScript_ReceiveTheBalls:
 
 ElmsAideScript:
 	faceplayer
-	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue AideScript_ExplainBalls
+	opentext
 	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
 	iftrue AideScript_TheftTestimony
 	writetext AideText_AlwaysBusy
@@ -533,9 +533,8 @@ AideScript_TheftTestimony:
 	end
 
 AideScript_ExplainBalls:
-	writetext AideText_ExplainBalls
-	waitbutton
-	closetext
+	scall AideScript_GiveYouBalls
+	setscene SCENE_ELMSLAB_NOTHING
 	end
 
 AideScript_AfterTheft:
@@ -1259,6 +1258,7 @@ AideText_GiveYouBalls:
 	done
 
 AideText_ExplainBalls:
+	
 	text "To add to your"
 	line "#DEX, you have"
 	cont "to catch #MON."
